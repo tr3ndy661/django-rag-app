@@ -1,5 +1,5 @@
 
-# stitch-demo
+# Rag-demo
  
 Small Django API that talks to a local LLM (running through LM Studio) and answers questions using a basic RAG setup over a few text files. Built this to understand how RAG and OpenAI-style API integration work under the hood, so no LangChain, no vector DB, just plain Python.
  
