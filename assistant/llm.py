@@ -1,16 +1,15 @@
 from openai import OpenAI
 import json
-
+from .tools import check_order_status
 
 client = OpenAI(
     base_url="http://localhost:1234/v1",
     api_key='lm-studio'
 )
 
-
 def ask_llm(question, context):
     completion = client.chat.completions.create(
-    model="qwen2.5-coder-1.5b-instruct",
+    model="qwen2.5-coder-7b-instruct",
     messages=[
             {"role": "user", "content": f"Using the following information: {context}\n\nAnswer this question: {question}"}
     ],
@@ -36,7 +35,7 @@ def ask_llm(question, context):
     ]
     )
 
-    message = completion.choices[0].message.content
+    message = completion.choices[0].message
 
     if message.tool_calls:
         tool_call = message.tool_calls[0]

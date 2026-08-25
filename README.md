@@ -65,6 +65,8 @@ curl -X POST http://localhost:1234/v1/chat/completions \
 Retrieval is just keyword overlap, no real understanding of meaning. Ask something totally unrelated like "what's the weather today" and it'll still confidently hand back whichever doc happens to share the most words, even if none of them are actually relevant. Real RAG would use embeddings and cosine similarity, and probably a minimum score threshold so it can say "nothing relevant found" instead of forcing a bad match.
  
 Also no memory between requests, every question is handled fresh with no history. And it only ever returns one document, doesn't combine info from multiple files :p.
+
+Currently on the tool calling - smaller models do struggle with providing the correct output although they do know how to use the tool. Models I've tried are qwen2.5-coder-7b-instruct and qwen2.5-coder-1.5b-instruct. They where useless as they did not give the out put in the correct way/ formatting. If you want to try it, try using the Qwen3-Coder-30B-A3B in Lm studio as that model is more capable, i did not try it yet lol but you can if you want.
  
 ## Next up
  
