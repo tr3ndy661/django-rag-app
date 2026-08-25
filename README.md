@@ -71,3 +71,6 @@ Currently on the tool calling - smaller models do struggle with providing the co
 ## Next up
  
 Still need to add tool/function calling so the model can actually call a function like check_order_status instead of just answering from text. After that, package the whole thing with Docker so it can run anywhere. Might swap the retrieval for real embeddings if I have time, you may ask where i got the shipping and delivery thing from yeah got it from the current job I have lol so yeah no judgin please :)).
+
+
+## All done now but I skipped a couple of things - not sure if I'll add anything as this took way more time than it should've but view the repo if you're interested in rag - materials I used for studying is AWS what is rag and a couple of random sites and articles with some claude for explanation of difficult or unclear topics :D
